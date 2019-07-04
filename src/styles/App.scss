@@ -1,0 +1,8 @@
+@import './general/settings/typography.scss';
+@import './general/settings/colors.scss';
+@import './general/settings/spacing.scss';
+/*Major*/
+@import './general/parts/general.scss';
+/*Components*/
+@import '../components/Header/header.scss';
+@import '../components/LandingPage/landingPage.scss';

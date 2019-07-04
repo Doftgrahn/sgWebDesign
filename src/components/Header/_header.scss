@@ -1,0 +1,108 @@
+@import './hamburger.scss';
+
+.navLink,
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    z-index: 10;
+    position: static;
+    top: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    transition: 0.5s ease;
+    background-color: brown;
+    padding: 10px;
+    //margin-right: auto;
+    @media screen and (min-width: 800px) {
+        //position: fixed;
+        justify-content: center;
+    }
+
+    .nav {
+        position: absolute;
+        width: 100%;
+        background: white;
+        padding: 200px 20px 50px;
+        top: 0;
+        left: 100%;
+        transition: left 0.4s ease;
+        min-height: 100vh;
+        @media screen and (min-width: 800px) {
+            position: static;
+            background: inherit;
+            min-height: 10px;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        li {
+            margin-left: 10px;
+            cursor: pointer;
+            font-family: inherit;
+            padding: 0;
+            letter-spacing: 1px;
+            font-size: 40px;
+            //color: $color-light;
+            //font-family: $font-headline;
+            transition: color 0.2s ease;
+            @media screen and (min-width: 800px) {
+                font-size: 20px;
+                margin-left: 20px;
+            }
+
+            &:hover {
+                //color: $color-red-light;
+            }
+
+            a {
+                letter-spacing: 2px;
+                font-size: 40px;
+                color: inherit;
+                font-family: inherit;
+                @media screen and (min-width: 800px) {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &--active {
+            left: 0;
+        }
+    }
+
+    .nav__wrapper {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        transition: 1s;
+        @media screen and (min-width: 800px) {
+            display: inline-flex;
+            flex-direction: row;
+            align-items: flex-end;
+        }
+
+        li {
+            @media screen and (min-width: 800px) {
+                display: inline-flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+.hidden {
+    top: -80px;
+    padding: 0;
+    position: fixed;
+}

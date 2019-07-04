@@ -1,0 +1,27 @@
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+        padding: 20px;
+        font-weight: bold;
+    }
+
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 50%;
+
+        p {
+            text-align: justify;
+
+            &:last-child {
+                margin-top: 20px;
+            }
+        }
+    }
+}
